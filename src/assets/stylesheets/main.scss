@@ -1,0 +1,272 @@
+@import url('https://use.typekit.net/igy8sti.css');
+@import 'colors';
+@import 'border-radius';
+@import 'typography';
+@import 'variables';
+@import 'vue-carousel-override';
+
+@import url('https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css');
+@import '~bulma';
+@import 'vendors/svgicon';
+// @import "vendors/buefy";
+
+// Import Bulma and Buefy styles
+@import '~buefy/src/scss/buefy';
+@import 'radio';
+
+@import '~tailwindcss/base';
+@import '~tailwindcss/components';
+@import '~tailwindcss/utilities';
+@tailwind components;
+
+@layer components {
+  .select-input-bg {
+    @apply bg-light-gray;
+  }
+  .tag-base {
+    display: flex;
+    @apply bg-green-grass-washed-out;
+    @apply text-blue-lagune;
+
+    @apply text-body;
+    @apply rounded-medium;
+    @apply p-tag-medium;
+
+    @apply mr-2;
+    @apply my-1;
+  }
+}
+
+body {
+  font-family: $family-primary;
+  color: var(--color-blue-lagune);
+}
+
+.tooltip {
+  @apply invisible absolute;
+  bottom: 15px;
+}
+
+.has-tooltip{
+  position: relative;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible z-50;
+}
+
+.moment-tag {
+  @apply bg-green-grass-washed-out text-blue-lagune tracking-wide text-body rounded-medium p-tag-medium w-max;
+}
+
+a {
+  color: unset !important;
+}
+
+.gap-20 {
+  > * + * {
+    margin-left: 20px;
+  }
+}
+
+.gap-15 {
+  > * + * {
+    margin-left: 15px;
+  }
+}
+
+.gap-10 {
+  > * + * {
+    margin-left: 10px;
+  }
+}
+
+.gap-5 {
+  > * + * {
+    margin-left: 5px;
+  }
+}
+
+.progress.is-small {
+  height: 4px;
+}
+
+div[class^='aspect-ratio'],
+div[class*=' aspect-ratio'] {
+  position: relative;
+}
+
+div[class^='aspect-ratio'] > *,
+div[class*=' aspect-ratio'] > * {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@import 'history';
+@import 'list';
+@import 'articles';
+@import 'stepper';
+@import 'inputs';
+
+.modal .modal-content {
+  @apply rounded-medium;
+  width: unset;
+  overflow: auto;
+  .overflow-visible {
+    overflow: visible;
+  }
+}
+.modal-content {
+  max-height: calc(100vh - 30px) !important;
+  max-width: calc(100vw - 30px) !important;
+}
+
+.modal-close {
+  display: none;
+  position: absolute !important;
+}
+
+.modal-close,
+.delete {
+  height: 16px;
+  width: 16px;
+  background-color: transparent;
+  opacity: 0.8;
+  transition: all 0.2s;
+
+  &::after,
+  &::before {
+    background-color: $info;
+  }
+
+  &::before {
+    height: 1px;
+    width: 100%;
+  }
+
+  &::after {
+    width: 1px;
+    height: 100%;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 1;
+    background-color: transparent;
+  }
+}
+
+.notification .delete {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+}
+
+.table-mobile-sort {
+  padding: 1rem;
+
+  .control select {
+    border-bottom-right-radius: 4px !important;
+    border-top-right-radius: 4px !important;
+  }
+
+  .control .button {
+    display: none;
+  }
+}
+
+.disabled {
+  opacity: 0.2;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.disabled-1 {
+  opacity: 0.4;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.completed {
+  opacity: 0.6;
+  pointer-events: none;
+  cursor:text;
+}
+
+.margin-auto {
+  margin: auto !important;
+}
+
+.w-min {
+  width: min-content;
+}
+.w-max {
+  width: max-content;
+}
+.h-fit {
+  height: fit-content;
+}
+
+.no-wrap-elipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar:horizontal {
+  @media (max-width: 640px) {
+    height: 0px;
+  }
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: var(--grey-scale-gray);
+  box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(190, 190, 190);
+  box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.gray-bg-with-topo {
+  $gray: 240;
+  background: linear-gradient(
+    to bottom right,
+    rgba($gray, $gray, $gray, 20%),
+    rgba($gray, $gray, $gray, 100),
+  ),url('~@/assets/svg/map-terrain.svg');
+}
+.white-bg-with-topo {
+  $white: 255;
+  background: linear-gradient(
+    to bottom right,
+    rgba($white, $white, $white, 20%),
+    rgba($white, $white, $white, 100),
+  ),url('~@/assets/svg/map-terrain.svg');
+}
+
+.h-v2-modal {
+  height: calc(100vh - theme('spacing.14'));
+}

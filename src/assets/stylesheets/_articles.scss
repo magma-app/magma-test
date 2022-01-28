@@ -1,0 +1,94 @@
+.article-card {
+  box-shadow: -2px 3px 10px #83B9BA3E;
+  transition: all 0.2s;
+
+  &:hover {
+    box-shadow: -2px 3px 10px #83b9babf;
+  }
+}
+
+.section-article {
+  line-height: 1.8;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  h6 {
+    font-size: 14px;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 18px;
+    margin: 2rem 0;
+
+    a {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol,
+  ul {
+    list-style-position: inside;
+    margin: 2rem 0;
+    font-weight: 300;
+  }
+
+  li {
+    p {
+      margin: 0;
+      display: inline;
+    }
+  }
+
+  blockquote {
+    position: relative;
+    padding-left: 70px;
+    font-weight: 300;
+    color: $info;
+    margin: 2rem 0;
+
+    &::before {
+      content: '';
+      width: 54px;
+      height: 40px;
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      background-image: url('~@/assets/images/left-quote.svg');
+      background-size: cover;
+    }
+  }
+}

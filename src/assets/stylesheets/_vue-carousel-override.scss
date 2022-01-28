@@ -1,0 +1,14 @@
+.VueCarousel-pagination {
+  position: absolute !important;
+  bottom: 5px;
+
+  .VueCarousel-dot {
+    background-color: var(--grey-scale-pure-white) !important;
+    @apply opacity-50;
+
+    &.VueCarousel-dot--active {
+      @apply opacity-100;
+      transform: scale(1.3) !important;
+    }
+  }
+}

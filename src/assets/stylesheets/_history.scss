@@ -1,0 +1,53 @@
+.history .history-item {
+  padding-bottom: 30px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    background-color: #83d6a0;
+    width: 1px;
+    height: 100%;
+    top: 5px;
+    bottom: 0;
+    left: 4px;
+  }
+
+  .dot {
+    position: relative;
+    width: 10px;
+    height: 10px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      background-color: white;
+      width: 14px;
+      height: 14px;
+      top: -3px;
+      left: -3px;
+      border-radius: 14px;
+      z-index: 1;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      background-color: #83d6a0;
+      width: 9px;
+      height: 9px;
+      top: 0px;
+      left: 0px;
+      border-radius: 8px;
+      z-index: 2;
+    }
+  }
+}
+
+.history .history-item:last-of-type {
+  padding-bottom: 0;
+
+  &:before {
+    display: none;
+  }
+}

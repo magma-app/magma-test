@@ -1,0 +1,211 @@
+// Import Bulma's core
+@import '~bulma/sass/utilities/_all';
+
+$family-primary: 'sofia-pro', BlinkMacSystemFont, -apple-system, 'Segoe UI',
+  'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+  'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+$mist: #f8f9f8;
+$lagune: #0a6e77;
+$lava: #ff654a;
+$forest: #023436;
+$grass: #83D6A0;
+$sky: #d2eeee;
+$corail: #ff9180;
+$gray: #777777;
+$blue-gray: #83b9ba;
+$dark-gray: var(--grey-scale-dark-gray);
+
+$green: #caeade;
+$border-green: $green;
+
+$text: #345758;
+$title-color: $forest;
+
+// Set your colors
+$primary: $forest;
+$primary-invert: findColorInvert($primary);
+
+$light: $mist;
+$light-invert: findColorInvert($light);
+
+$twitter: #4099ff;
+$twitter-invert: findColorInvert($twitter);
+
+$danger: $lava;
+$danger-invert: findColorInvert($danger);
+
+$warning: $corail;
+$warning-invert: findColorInvert($warning);
+
+$success: $grass;
+$success-invert: findColorInvert($success);
+
+$info: $lagune;
+$info-invert: findColorInvert($info);
+
+$babyblue: #edf6f7;
+$babyblue-invert: findColorInvert($babyblue);
+
+$gray-invert: findColorInvert($gray);
+
+// $new-green:var(--color-green-grass);
+$status-new: $grass;
+$status-waiting: $corail;
+$status-screening: $gray;
+$status-trial: $sky;
+$status-hired: $grass;
+$status-matched: $grass;
+$status-contacted: $grass;
+$status-meeted: $grass;
+$status-coached: $grass;
+$status-pooled: $blue-gray;
+$status-refuted: #adbcbc;
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+  'white': (
+    $white,
+    $black
+  ),
+  'black': (
+    $black,
+    $white
+  ),
+  'light': (
+    $light,
+    $light-invert
+  ),
+  'dark': (
+    $dark,
+    $dark-invert
+  ),
+  'blue-gray': (
+    $blue-gray,
+    findColorInvert($blue-gray)
+  ),
+  'gray': (
+    $gray,
+    $gray-invert
+  ),
+  'green': (
+    $green,
+    findColorInvert($green)
+  ),
+  'primary': (
+    $primary,
+    $primary-invert
+  ),
+  'info': (
+    $info,
+    $info-invert
+  ),
+  'success': (
+    $success,
+    $success-invert
+  ),
+  'warning': (
+    $warning,
+    $warning-invert
+  ),
+  'danger': (
+    $danger,
+    $danger-invert
+  ),
+  'twitter': (
+    $twitter,
+    $twitter-invert
+  ),
+  'baby-blue': (
+    $babyblue,
+    $babyblue-invert
+  ),
+  'sky': (
+    $sky,
+    findColorInvert($sky)
+  ),
+  'status-new': (
+    $status-new,
+    findColorInvert($status-new)
+  ),
+  'status-waiting': (
+    $status-waiting,
+    findColorInvert($status-waiting)
+  ),
+  'status-screening': (
+    $status-screening,
+    findColorInvert($status-screening)
+  ),
+  'status-trial': (
+    $status-trial,
+    findColorInvert($status-trial)
+  ),
+  'status-hired': (
+    $status-hired,
+    findColorInvert($status-hired)
+  ),
+  'status-matched': (
+    $status-matched,
+    findColorInvert($status-matched)
+  ),
+  'status-contacted': (
+    $status-contacted,
+    findColorInvert($status-contacted)
+  ),
+  'status-meeted': (
+    $status-meeted,
+    findColorInvert($status-meeted)
+  ),
+  'status-coached': (
+    $status-coached,
+    findColorInvert($status-coached)
+  ),
+  'status-pooled': (
+    $status-pooled,
+    findColorInvert($status-pooled)
+  ),
+  'status-refuted': (
+    $status-refuted,
+    findColorInvert($status-refuted)
+  ),
+  'border-green': (
+    $border-green,
+    findColorInvert($border-green)
+  )
+);
+
+$border-light: #dae1e0;
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+$box-background-color: $light;
+$box-radius: 12px;
+$box-shadow: -8px 8px 12px rgba(#023436, 0.3);
+
+.box {
+  border: 6px solid white;
+}
+
+.rh-box {
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid $border-green;
+  display: block;
+  padding: 1.875rem;
+}
+
+// Tables
+$table-head-background-color: #f5fafa;
+$table-head-cell-color: rgba($text, 0.6);
+$table-cell-border: 1px solid #e0e6e5;
+$table-color: $text;
+
+// Dropdown
+$dropdown-content-z: 9;
+$dropdown-menu-min-width: 7rem;
+
+$radio-active-background-color: $dark-gray;
+$checkbox-active-background-color: $dark-gray;

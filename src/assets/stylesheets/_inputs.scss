@@ -1,0 +1,122 @@
+.large-input {
+  input, .dropdown {
+    @apply px-4 rounded-2xl border-transparent bg-light-gray;
+    height: 56px;
+    box-shadow: none;
+  }
+
+  .icon.is-left {
+    top: 8px;
+    left: 8px!important;
+  }
+  
+  .icon.is-right {
+    right: 8px!important;
+    top: 8px!important;
+  }
+}
+
+.large-input.white {
+  input, .dropdown {
+    @apply bg-white;
+  }
+}
+
+.small-input {
+  input {
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2px;
+    box-shadow: none;
+    border-color: transparent;
+  }
+}
+
+.large-select {
+  .select:not(.is-multiple) {
+    height: 72px;
+  }
+
+  select {
+    height: 72px;
+    padding-left: 15px;
+  }
+}
+
+$input-select-height: 56px;
+
+.boomerang-input {
+  textarea,
+  input {
+    @apply select-input-bg px-4;
+    border-radius: 16px;
+    box-shadow: none;
+    height: $input-select-height;
+    border-color: transparent;
+  }
+
+  textarea {
+    min-height: 300px;
+    padding: 20px;
+  }
+}
+
+.boomerang-input.white {
+  textarea,
+  input {
+    @apply bg-white;
+  }
+}
+
+.control.has-icons-left
+  .input,
+.control.has-icons-left
+  .taginput
+  .taginput-container.is-focusable,
+.taginput
+  .control.has-icons-left
+  .taginput-container.is-focusable,
+.control.has-icons-left
+  .select
+  select {
+  padding-left: 55px;
+}
+
+.boomerang-input,
+.boomerang-select {
+  input,
+  select,
+  textarea {
+    &:hover {
+      // border: 0px !important;
+      // outline: 0px !important;
+    }
+    @apply text-black-forest;
+    &::placeholder {
+      @apply text-black-forest;
+      @apply opacity-60;
+    }
+  }
+}
+
+.boomerang-select {
+  height: $input-select-height;
+  .select,
+  select,
+  option {
+    width: 100%;
+  }
+
+  select {
+    @apply select-input-bg px-4;
+    border-radius: 16px;
+    box-shadow: none;
+    height: $input-select-height;
+    border-color: transparent;
+  }
+
+  .select:not(.is-multiple):not(.is-loading)::after {
+    margin-top: 4px;
+  }
+}

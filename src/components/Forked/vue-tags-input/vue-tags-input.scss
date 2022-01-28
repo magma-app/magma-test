@@ -1,0 +1,222 @@
+$primary: #5C6BC0;
+$error: #e54d42;
+$success: #68cd86;
+$warn: #ffb648;
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('./assets/fonts/icomoon.eot?7grlse');
+  src:  url('./assets/fonts/icomoon.eot?7grlse#iefix') format('embedded-opentype'),
+    url('./assets/fonts/icomoon.ttf?7grlse') format('truetype'),
+    url('./assets/fonts/icomoon.woff?7grlse') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="ti-icon-"], [class*=" ti-icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ti-icon-check:before {
+  content: "\e902";
+}
+
+.ti-icon-close:before {
+  content: "\e901";
+}
+
+.ti-icon-undo:before {
+  content: "\e900";
+}
+
+ul {
+  @apply flex;
+  @apply flex-wrap;
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[disabled] {
+  background-color: transparent;
+}
+
+.vue-tags-input {
+  position: relative;
+  @apply rounded-medium;
+  @apply bg-light-gray;
+}
+
+div.vue-tags-input.disabled {
+  opacity: 0.5;
+
+  * {
+    cursor: default;
+  }
+}
+
+.ti-input {
+  border: none;
+  @apply rounded-medium;
+  @apply bg-light-gray;
+  display: flex;
+  @apply p-tag-selector;
+  @apply min-h-tag-selector-input;
+  @apply relative;
+  flex-wrap: wrap;
+  z-index: 9;
+}
+
+.ti-tags {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  line-height: 1em;
+}
+
+// .tag-base {
+//   display: flex;
+//   @apply bg-green-grass-washed-out;
+//   @apply text-blue-lagune;
+
+//   @apply text-body;
+//   @apply rounded-medium;
+//   @apply p-tag-medium;
+
+//   @apply mr-2;
+//   @apply my-1;
+
+// }
+
+.ti-tag {
+  display: flex;
+  @apply bg-green-grass-washed-out;
+  @apply text-blue-lagune;
+
+  @apply text-body;
+  @apply rounded-medium;
+  @apply p-tag-medium;
+
+  @apply mr-2;
+  @apply my-1;
+
+  &:focus {
+    outline: none;
+  }
+
+  .ti-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .ti-tag-center {
+    padding-bottom: 2px;
+    position: relative;
+  }
+
+  span {
+    line-height: .85em;
+  }
+
+  span.ti-hidden {
+    padding-left: 14px;
+    visibility: hidden;
+    height: 0px;
+    white-space: pre;
+  }
+
+  .ti-actions {
+    margin-left: 2px;
+    display: flex;
+    align-items: center;
+    font-size: 1.15em;
+
+    i {
+      cursor: pointer;
+    }
+  }
+
+  &:last-child {
+    margin-right: 4px;
+  }
+
+  &.ti-invalid, &.ti-tag.ti-deletion-mark {
+    background-color: $error;
+  }
+}
+
+.ti-new-tag-input-wrapper {
+  display: flex;
+  flex: 1 0 auto;
+  padding: 3px 5px;
+  margin: 2px;
+  font-size: 16px;
+
+  input {
+    flex: 1 0 auto;
+    min-width: 100px;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+.ti-new-tag-input {
+  line-height: initial;
+  @apply bg-light-gray;
+  @apply text-black-forest;
+}
+
+.ti-autocomplete {
+  margin-top: -15px;
+  @apply rounded-b-medium;
+  @apply shadow-md;
+  @apply px-tag-selector;
+  @apply pb-tag-selector;
+  padding-top: 23px; // margin-top + p-tag-selector
+  @apply min-h-tag-selector-input;
+  border: none;
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  z-index: 8;
+}
+
+.ti-item {
+  display: flex;
+  @apply bg-green-grass-washed-out;
+  @apply text-blue-lagune;
+
+  @apply text-body;
+  @apply rounded-medium;
+  @apply p-tag-medium;
+
+  @apply mr-2;
+  @apply my-1;
+}
+
+.ti-item > div {
+  cursor: pointer;
+  width: 100%;
+}
+
+.ti-selected-item {
+  @apply bg-green-grass;
+  @apply bg-opacity-50;
+}

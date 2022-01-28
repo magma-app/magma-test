@@ -1,0 +1,9 @@
+.b-radio.radio input[type=radio]:checked + .check:before {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.b-checkbox.checkbox input[type=checkbox]:checked + .check {
+    background: $radio-active-background-color;
+    border-color: $radio-active-background-color;
+}
